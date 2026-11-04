@@ -1,0 +1,210 @@
+<div data-site-import-document-lang="en" data-site-import-responsive-incomplete="scroll" data-lov-body="true">
+
+<!-- Nav -->
+<nav data-lov-style-id="0" data-lov-cid="0">
+  <div class="nav-logo" data-lov-style-id="1" data-lov-cid="1">
+    <div class="nav-logo-icon" data-lov-style-id="2" data-lov-cid="2">🛡</div>
+    <div class="nav-logo-text" data-lov-style-id="3" data-lov-cid="3">Prompt<span data-lov-style-id="4" data-lov-cid="4">Shield</span></div>
+  </div>
+  <div class="nav-links" data-lov-style-id="5" data-lov-cid="5">
+    <a data-lov-cid="6" data-lov-style-id="6" href="#layers">How it Works</a>
+    <a data-lov-cid="7" data-lov-style-id="7" href="#usecases">Use Cases</a>
+    <a data-lov-cid="8" data-lov-style-id="8" href="#pricing">Pricing</a>
+    <a data-lov-cid="9" data-lov-style-id="9" href="/docshtml-53d5ff2ab416f88c">Docs</a>
+    <a data-lov-cid="10" data-lov-style-id="10" href="/dashboardhtml-ecf7c69981b0bce1">Dashboard</a>
+  </div>
+  <a class="nav-cta" data-lov-cid="11" data-lov-style-id="11" href="/docs" target="_blank">Try the API →</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero" data-lov-style-id="12" data-lov-cid="12">
+  <div class="hero-badge" data-lov-style-id="13" data-lov-cid="13">🔴 Live — prompt-shield.onrender.com</div>
+  <h1 data-lov-style-id="14" data-lov-cid="14">Stop Prompt Injection<br data-lov-style-id="15" data-lov-cid="15"/>Before It <span data-lov-style-id="16" data-lov-cid="16">Reaches Your LLM</span></h1>
+  <p class="hero-sub" data-lov-style-id="17" data-lov-cid="17">PromptShield is a 4-layer defense middleware that blocks jailbreaks, system prompt leaking, and instruction overrides in real time.</p>
+  <div class="hero-actions" data-lov-style-id="18" data-lov-cid="18">
+    <a class="btn-primary" data-lov-cid="19" data-lov-style-id="19" href="/docs" target="_blank">View Live API</a>
+    <a class="btn-secondary" data-lov-cid="20" data-lov-style-id="20" href="https://github.com/JustiNoel/LLM-Prompt-Injection" target="_blank">GitHub →</a>
+  </div>
+  <div class="hero-code" data-lov-style-id="21" data-lov-cid="21">
+    <div class="code-bar" data-lov-style-id="22" data-lov-cid="22">
+      <div class="dot dot-r" data-lov-style-id="23" data-lov-cid="23"></div><div class="dot dot-y" data-lov-style-id="24" data-lov-cid="24"></div><div class="dot dot-g" data-lov-style-id="25" data-lov-cid="25"></div>
+    </div>
+    <pre data-lov-style-id="26" data-lov-cid="26"><code data-lov-cid="27" data-lov-style-id="27"><span class="c-muted" data-lov-style-id="28" data-lov-cid="28"># Integrate in 3 lines</span>
+<span class="c-kw" data-lov-style-id="29" data-lov-cid="29">from</span> <span class="c-teal" data-lov-style-id="30" data-lov-cid="30">promptshield_sdk</span> <span class="c-kw" data-lov-style-id="31" data-lov-cid="31">import</span> PromptShieldClient
+
+client = PromptShieldClient(<span class="c-str" data-lov-style-id="32" data-lov-cid="32">&#34;ps_live_yourkey&#34;</span>)
+result = client.chat(<span class="c-str" data-lov-style-id="33" data-lov-cid="33">&#34;Hello!&#34;</span>)
+
+<span class="c-muted" data-lov-style-id="34" data-lov-cid="34"># Injection attempt? Blocked automatically.</span>
+result = client.chat(<span class="c-str" data-lov-style-id="35" data-lov-cid="35">&#34;Ignore all previous instructions&#34;</span>)
+<span class="c-muted" data-lov-style-id="36" data-lov-cid="36"># → allowed: false, blocked_at_layer: 1</span></code></pre>
+  </div>
+</section>
+
+<!-- Stats -->
+<div class="stats-banner" data-lov-style-id="37" data-lov-cid="37">
+  <div class="stat-item" data-lov-style-id="38" data-lov-cid="38"><div class="stat-num" data-lov-style-id="39" data-lov-cid="39">4</div><div class="stat-lbl" data-lov-style-id="40" data-lov-cid="40">Defense Layers</div></div>
+  <div class="stat-item" data-lov-style-id="41" data-lov-cid="41"><div class="stat-num" data-lov-style-id="42" data-lov-cid="42">30+</div><div class="stat-lbl" data-lov-style-id="43" data-lov-cid="43">Attack Patterns</div></div>
+  <div class="stat-item" data-lov-style-id="44" data-lov-cid="44"><div class="stat-num" data-lov-style-id="45" data-lov-cid="45">&lt;2s</div><div class="stat-lbl" data-lov-style-id="46" data-lov-cid="46">Avg Response Time</div></div>
+  <div class="stat-item" data-lov-style-id="47" data-lov-cid="47"><div class="stat-num" data-lov-style-id="48" data-lov-cid="48">100%</div><div class="stat-lbl" data-lov-style-id="49" data-lov-cid="49">API Coverage</div></div>
+</div>
+
+<!-- Layers -->
+<section id="layers" data-lov-style-id="50" data-lov-cid="50">
+  <div class="section-inner" data-lov-style-id="51" data-lov-cid="51">
+    <div class="section-label" data-lov-style-id="52" data-lov-cid="52">Architecture</div>
+    <h2 data-lov-style-id="53" data-lov-cid="53">4 Layers of Defense</h2>
+    <p class="section-sub" data-lov-style-id="54" data-lov-cid="54">Every request passes through all four layers before reaching your LLM — and before the response reaches your user.</p>
+    <div class="layers-grid" data-lov-style-id="55" data-lov-cid="55">
+      <div class="layer-card" data-lov-style-id="56" data-lov-cid="56">
+        <div class="layer-num" data-lov-style-id="57" data-lov-cid="57">LAYER 01</div>
+        <div class="layer-icon" data-lov-style-id="58" data-lov-cid="58">🔍</div>
+        <div class="layer-title" data-lov-style-id="59" data-lov-cid="59">Input Classification</div>
+        <div class="layer-desc" data-lov-style-id="60" data-lov-cid="60">Pattern matching + heuristic scoring detects injection attempts, jailbreak templates, and role-override attacks before anything else runs.</div>
+      </div>
+      <div class="layer-card" data-lov-style-id="61" data-lov-cid="61">
+        <div class="layer-num" data-lov-style-id="62" data-lov-cid="62">LAYER 02</div>
+        <div class="layer-icon" data-lov-style-id="63" data-lov-cid="63">🧹</div>
+        <div class="layer-title" data-lov-style-id="64" data-lov-cid="64">Context Sanitization</div>
+        <div class="layer-desc" data-lov-style-id="65" data-lov-cid="65">Strips prompt delimiters, neutralizes override phrases, removes encoded payloads, and wraps input in safe boundaries.</div>
+      </div>
+      <div class="layer-card" data-lov-style-id="66" data-lov-cid="66">
+        <div class="layer-num" data-lov-style-id="67" data-lov-cid="67">LAYER 03</div>
+        <div class="layer-icon" data-lov-style-id="68" data-lov-cid="68">🔐</div>
+        <div class="layer-title" data-lov-style-id="69" data-lov-cid="69">Prompt Integrity</div>
+        <div class="layer-desc" data-lov-style-id="70" data-lov-cid="70">HMAC-signs and verifies your system prompt hasn&#39;t been tampered with. Catches structural violations before the LLM call.</div>
+      </div>
+      <div class="layer-card" data-lov-style-id="71" data-lov-cid="71">
+        <div class="layer-num" data-lov-style-id="72" data-lov-cid="72">LAYER 04</div>
+        <div class="layer-icon" data-lov-style-id="73" data-lov-cid="73">👁</div>
+        <div class="layer-title" data-lov-style-id="74" data-lov-cid="74">Output Monitoring</div>
+        <div class="layer-desc" data-lov-style-id="75" data-lov-cid="75">Scans LLM responses for jailbreak success signals, system prompt leakage, PII exposure, and harmful content patterns.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Use Cases -->
+<section id="usecases" style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" data-lov-style-id="76" data-lov-cid="76">
+  <div class="section-inner" data-lov-style-id="77" data-lov-cid="77">
+    <div class="section-label" data-lov-style-id="78" data-lov-cid="78">Use Cases</div>
+    <h2 data-lov-style-id="79" data-lov-cid="79">Who Needs PromptShield?</h2>
+    <p class="section-sub" data-lov-style-id="80" data-lov-cid="80">Any application that exposes an LLM to user input is vulnerable. PromptShield protects them all.</p>
+    <div class="use-cases" data-lov-style-id="81" data-lov-cid="81">
+      <div class="use-card" data-lov-style-id="82" data-lov-cid="82">
+        <div class="use-icon" data-lov-style-id="83" data-lov-cid="83">🏦</div>
+        <div class="use-title" data-lov-style-id="84" data-lov-cid="84">Fintechs &amp; Banks</div>
+        <div class="use-desc" data-lov-style-id="85" data-lov-cid="85">AI chatbots handling financial queries are prime targets. PromptShield prevents data extraction and unauthorized instruction execution.</div>
+      </div>
+      <div class="use-card" data-lov-style-id="86" data-lov-cid="86">
+        <div class="use-icon" data-lov-style-id="87" data-lov-cid="87">🏥</div>
+        <div class="use-title" data-lov-style-id="88" data-lov-cid="88">Healthtech</div>
+        <div class="use-desc" data-lov-style-id="89" data-lov-cid="89">Patient-facing AI tools must never leak sensitive data. Layer 4 output monitoring catches PII before it reaches users.</div>
+      </div>
+      <div class="use-card" data-lov-style-id="90" data-lov-cid="90">
+        <div class="use-icon" data-lov-style-id="91" data-lov-cid="91">📚</div>
+        <div class="use-title" data-lov-style-id="92" data-lov-cid="92">EdTech Platforms</div>
+        <div class="use-desc" data-lov-style-id="93" data-lov-cid="93">AI tutors deployed to students are easily manipulated. PromptShield blocks attempts to bypass content guidelines.</div>
+      </div>
+      <div class="use-card" data-lov-style-id="94" data-lov-cid="94">
+        <div class="use-icon" data-lov-style-id="95" data-lov-cid="95">🏢</div>
+        <div class="use-title" data-lov-style-id="96" data-lov-cid="96">Enterprise AI</div>
+        <div class="use-desc" data-lov-style-id="97" data-lov-cid="97">Internal copilots with access to sensitive company data need strong prompt security. Self-host with Docker for full control.</div>
+      </div>
+      <div class="use-card" data-lov-style-id="98" data-lov-cid="98">
+        <div class="use-icon" data-lov-style-id="99" data-lov-cid="99">🛒</div>
+        <div class="use-title" data-lov-style-id="100" data-lov-cid="100">E-commerce Bots</div>
+        <div class="use-desc" data-lov-style-id="101" data-lov-cid="101">Customer service AIs can be manipulated into giving unauthorized discounts or leaking pricing logic. Not anymore.</div>
+      </div>
+      <div class="use-card" data-lov-style-id="102" data-lov-cid="102">
+        <div class="use-icon" data-lov-style-id="103" data-lov-cid="103">🏛</div>
+        <div class="use-title" data-lov-style-id="104" data-lov-cid="104">Government &amp; NGOs</div>
+        <div class="use-desc" data-lov-style-id="105" data-lov-cid="105">Public-facing AI tools in sensitive contexts need audit trails and compliance-ready logging. PromptShield delivers both.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section id="pricing" data-lov-style-id="106" data-lov-cid="106">
+  <div class="section-inner" data-lov-style-id="107" data-lov-cid="107">
+    <div class="section-label" data-lov-style-id="108" data-lov-cid="108">Pricing</div>
+    <h2 data-lov-style-id="109" data-lov-cid="109">Simple, Honest Pricing</h2>
+    <p class="section-sub" data-lov-style-id="110" data-lov-cid="110">Start free. Scale as you grow. Enterprise self-hosting available.</p>
+    <div class="pricing-grid" data-lov-style-id="111" data-lov-cid="111">
+      <div class="price-card" data-lov-style-id="112" data-lov-cid="112">
+        <div class="price-plan" data-lov-style-id="113" data-lov-cid="113">Starter</div>
+        <div class="price-amount" data-lov-style-id="114" data-lov-cid="114">Free</div>
+        <div class="price-period" data-lov-style-id="115" data-lov-cid="115">During beta</div>
+        <ul class="price-features" data-lov-style-id="116" data-lov-cid="116">
+          <li data-lov-style-id="117" data-lov-cid="117">1 API key</li>
+          <li data-lov-style-id="118" data-lov-cid="118">60 requests/min</li>
+          <li data-lov-style-id="119" data-lov-cid="119">All 4 defense layers</li>
+          <li data-lov-style-id="120" data-lov-cid="120">Audit logs (last 1000)</li>
+          <li data-lov-style-id="121" data-lov-cid="121">Community support</li>
+        </ul>
+        <a class="price-btn" data-lov-cid="122" data-lov-style-id="122" href="/docs" target="_blank">Get Started</a>
+      </div>
+      <div class="price-card featured" data-lov-style-id="123" data-lov-cid="123">
+        <div class="featured-badge" data-lov-style-id="124" data-lov-cid="124">MOST POPULAR</div>
+        <div class="price-plan" data-lov-style-id="125" data-lov-cid="125">Professional</div>
+        <div class="price-amount" data-lov-style-id="126" data-lov-cid="126">$99<span style="font-size: 1rem; font-weight: 400;" data-lov-style-id="127" data-lov-cid="127">/mo</span></div>
+        <div class="price-period" data-lov-style-id="128" data-lov-cid="128">Billed monthly</div>
+        <ul class="price-features" data-lov-style-id="129" data-lov-cid="129">
+          <li data-lov-style-id="130" data-lov-cid="130">10 API keys</li>
+          <li data-lov-style-id="131" data-lov-cid="131">Custom rate limits</li>
+          <li data-lov-style-id="132" data-lov-cid="132">All 4 defense layers</li>
+          <li data-lov-style-id="133" data-lov-cid="133">Full audit trail</li>
+          <li data-lov-style-id="134" data-lov-cid="134">Dashboard access</li>
+          <li data-lov-style-id="135" data-lov-cid="135">Email support</li>
+        </ul>
+        <a class="price-btn" data-lov-cid="136" data-lov-style-id="136" href="mailto:justinoel254@gmail.com">Contact Us</a>
+      </div>
+      <div class="price-card" data-lov-style-id="137" data-lov-cid="137">
+        <div class="price-plan" data-lov-style-id="138" data-lov-cid="138">Enterprise</div>
+        <div class="price-amount" data-lov-style-id="139" data-lov-cid="139">Custom</div>
+        <div class="price-period" data-lov-style-id="140" data-lov-cid="140">Annual license</div>
+        <ul class="price-features" data-lov-style-id="141" data-lov-cid="141">
+          <li data-lov-style-id="142" data-lov-cid="142">Unlimited API keys</li>
+          <li data-lov-style-id="143" data-lov-cid="143">Self-hosted (Docker)</li>
+          <li data-lov-style-id="144" data-lov-cid="144">Custom aggression tuning</li>
+          <li data-lov-style-id="145" data-lov-cid="145">SLA guarantee</li>
+          <li data-lov-style-id="146" data-lov-cid="146">Dedicated support</li>
+          <li data-lov-style-id="147" data-lov-cid="147">Compliance reporting</li>
+        </ul>
+        <a class="price-btn" data-lov-cid="148" data-lov-style-id="148" href="mailto:justinoel254@gmail.com">Talk to Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" data-lov-style-id="149" data-lov-cid="149">
+  <div class="section-inner" style="text-align: center;" data-lov-style-id="150" data-lov-cid="150">
+    <div class="section-label" style="justify-content: center; display: flex;" data-lov-style-id="151" data-lov-cid="151">Get Started</div>
+    <h2 data-lov-style-id="152" data-lov-cid="152">Your LLM is exposed.<br data-lov-style-id="153" data-lov-cid="153"/>Fix it in minutes.</h2>
+    <p class="section-sub" style="margin: 1rem auto 2rem;" data-lov-style-id="154" data-lov-cid="154">PromptShield integrates with any LLM backend. One API call. Full protection.</p>
+    <div class="hero-actions" data-lov-style-id="155" data-lov-cid="155">
+      <a class="btn-primary" data-lov-cid="156" data-lov-style-id="156" href="/docs" target="_blank">View Live API</a>
+      <a class="btn-secondary" data-lov-cid="157" data-lov-style-id="157" href="/docshtml-53d5ff2ab416f88c">Read the Docs</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer data-lov-style-id="158" data-lov-cid="158">
+  <div class="nav-logo" data-lov-style-id="159" data-lov-cid="159">
+    <div class="nav-logo-icon" style="width: 24px; height: 24px; font-size: 0.75rem;" data-lov-style-id="160" data-lov-cid="160">🛡</div>
+    <div class="nav-logo-text" style="font-size: 0.9rem;" data-lov-style-id="161" data-lov-cid="161">Prompt<span data-lov-style-id="162" data-lov-cid="162">Shield</span></div>
+  </div>
+  <div style="color: var(--muted); font-size: 0.75rem;" data-lov-style-id="163" data-lov-cid="163">Built by Noel · Kenya 🇰🇪</div>
+  <div class="footer-links" data-lov-style-id="164" data-lov-cid="164">
+    <a data-lov-cid="165" data-lov-style-id="165" href="https://github.com/JustiNoel/LLM-Prompt-Injection" target="_blank">GitHub</a>
+    <a data-lov-cid="166" data-lov-style-id="166" href="/docshtml-53d5ff2ab416f88c">Docs</a>
+    <a data-lov-cid="167" data-lov-style-id="167" href="/dashboardhtml-ecf7c69981b0bce1">Dashboard</a>
+    <a data-lov-cid="168" data-lov-style-id="168" href="/docs" target="_blank">API</a>
+  </div>
+</footer>
+
+
+</div>
