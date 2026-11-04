@@ -2,7 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/pages/docs.css?raw";
 
 export const Route = createFileRoute("/docs")({
-  head: () => ({ meta: [{ title: "PromptShield API - Swagger UI" }] }),
+  head: () => ({ meta: [
+    { title: "PromptShield API - Swagger UI" },
+    { name: "description", content: "OpenAPI reference for the PromptShield API: chat, analyze, aggression, stats and audit log endpoints." },
+    { property: "og:title", content: "PromptShield API - Swagger UI" },
+    { property: "og:description", content: "OpenAPI reference for the PromptShield API endpoints." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   component: Index,
 });
 

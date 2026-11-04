@@ -2,7 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/pages/docshtml-53d5ff2ab416f88c.css?raw";
 
 export const Route = createFileRoute("/docshtml-53d5ff2ab416f88c")({
-  head: () => ({ meta: [{ title: "PromptShield — Integration Docs" }] }),
+  head: () => ({ meta: [
+    { title: "PromptShield — Integration Docs" },
+    { name: "description", content: "Integrate PromptShield in minutes: authentication, quickstart, API endpoints and SDK examples for the 4-layer prompt injection defense." },
+    { property: "og:title", content: "PromptShield — Integration Docs" },
+    { property: "og:description", content: "Authentication, quickstart, endpoints and SDK examples for PromptShield's 4-layer prompt injection defense." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   staticData: { importedDocument: { html: { "lang": "en" }, body: { "data-site-import-responsive-incomplete": "scroll" } } },
   component: Index,
 });

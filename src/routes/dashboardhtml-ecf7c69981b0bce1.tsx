@@ -2,7 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/pages/dashboardhtml-ecf7c69981b0bce1.css?raw";
 
 export const Route = createFileRoute("/dashboardhtml-ecf7c69981b0bce1")({
-  head: () => ({ meta: [{ title: "PromptShield — Dashboard" }] }),
+  head: () => ({ meta: [
+    { title: "PromptShield — Dashboard" },
+    { name: "description", content: "Connect with your X-API-Key to view live stats, audit logs and threat analytics for your PromptShield deployment." },
+    { property: "og:title", content: "PromptShield — Dashboard" },
+    { property: "og:description", content: "Live stats, audit logs and threat analytics for your PromptShield deployment." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   staticData: { importedDocument: { html: { "lang": "en" }, body: { "data-site-import-responsive-incomplete": "scroll" } } },
   component: Index,
 });
