@@ -20,7 +20,7 @@ const SEV: Record<string, string> = {
 };
 
 export function ScanPanel({ compact = false }: { compact?: boolean }) {
-  const [prompt, setPrompt] = useState(SAMPLE_ATTACKS[0].prompt);
+  const [prompt, setPrompt] = useState(SAMPLE_ATTACKS[0]?.prompt ?? "");
   const [result, setResult] = useState<ScanResult | null>(null);
 
   const run = (p = prompt) => setResult(scanPrompt(p));
