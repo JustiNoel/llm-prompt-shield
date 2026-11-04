@@ -10,78 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DashboardhtmlEcf7c69981b0bce1RouteImport } from './routes/dashboardhtml-ecf7c69981b0bce1'
+import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DocsRouteImport } from './routes/docs'
-import { Route as Docshtml53d5ff2ab416f88cRouteImport } from './routes/docshtml-53d5ff2ab416f88c'
+import { Route as PlaygroundRouteImport } from './routes/playground'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DashboardhtmlEcf7c69981b0bce1Route =
-  DashboardhtmlEcf7c69981b0bce1RouteImport.update({
-    id: '/dashboardhtml-ecf7c69981b0bce1',
-    path: '/dashboardhtml-ecf7c69981b0bce1',
-    getParentRoute: () => rootRouteImport,
-  } as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DocsRoute = DocsRouteImport.update({
   id: '/docs',
   path: '/docs',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Docshtml53d5ff2ab416f88cRoute =
-  Docshtml53d5ff2ab416f88cRouteImport.update({
-    id: '/docshtml-53d5ff2ab416f88c',
-    path: '/docshtml-53d5ff2ab416f88c',
-    getParentRoute: () => rootRouteImport,
-  } as any)
+const PlaygroundRoute = PlaygroundRouteImport.update({
+  id: '/playground',
+  path: '/playground',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/dashboardhtml-ecf7c69981b0bce1': typeof DashboardhtmlEcf7c69981b0bce1Route
+  '/dashboard': typeof DashboardRoute
   '/docs': typeof DocsRoute
-  '/docshtml-53d5ff2ab416f88c': typeof Docshtml53d5ff2ab416f88cRoute
+  '/playground': typeof PlaygroundRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/dashboardhtml-ecf7c69981b0bce1': typeof DashboardhtmlEcf7c69981b0bce1Route
+  '/dashboard': typeof DashboardRoute
   '/docs': typeof DocsRoute
-  '/docshtml-53d5ff2ab416f88c': typeof Docshtml53d5ff2ab416f88cRoute
+  '/playground': typeof PlaygroundRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/dashboardhtml-ecf7c69981b0bce1': typeof DashboardhtmlEcf7c69981b0bce1Route
+  '/dashboard': typeof DashboardRoute
   '/docs': typeof DocsRoute
-  '/docshtml-53d5ff2ab416f88c': typeof Docshtml53d5ff2ab416f88cRoute
+  '/playground': typeof PlaygroundRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/dashboardhtml-ecf7c69981b0bce1'
-    | '/docs'
-    | '/docshtml-53d5ff2ab416f88c'
+  fullPaths: '/' | '/dashboard' | '/docs' | '/playground'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/dashboardhtml-ecf7c69981b0bce1'
-    | '/docs'
-    | '/docshtml-53d5ff2ab416f88c'
-  id:
-    | '__root__'
-    | '/'
-    | '/dashboardhtml-ecf7c69981b0bce1'
-    | '/docs'
-    | '/docshtml-53d5ff2ab416f88c'
+  to: '/' | '/dashboard' | '/docs' | '/playground'
+  id: '__root__' | '/' | '/dashboard' | '/docs' | '/playground'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DashboardhtmlEcf7c69981b0bce1Route: typeof DashboardhtmlEcf7c69981b0bce1Route
+  DashboardRoute: typeof DashboardRoute
   DocsRoute: typeof DocsRoute
-  Docshtml53d5ff2ab416f88cRoute: typeof Docshtml53d5ff2ab416f88cRoute
+  PlaygroundRoute: typeof PlaygroundRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -93,11 +78,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dashboardhtml-ecf7c69981b0bce1': {
-      id: '/dashboardhtml-ecf7c69981b0bce1'
-      path: '/dashboardhtml-ecf7c69981b0bce1'
-      fullPath: '/dashboardhtml-ecf7c69981b0bce1'
-      preLoaderRoute: typeof DashboardhtmlEcf7c69981b0bce1RouteImport
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/docs': {
@@ -107,11 +92,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/docshtml-53d5ff2ab416f88c': {
-      id: '/docshtml-53d5ff2ab416f88c'
-      path: '/docshtml-53d5ff2ab416f88c'
-      fullPath: '/docshtml-53d5ff2ab416f88c'
-      preLoaderRoute: typeof Docshtml53d5ff2ab416f88cRouteImport
+    '/playground': {
+      id: '/playground'
+      path: '/playground'
+      fullPath: '/playground'
+      preLoaderRoute: typeof PlaygroundRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -119,9 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DashboardhtmlEcf7c69981b0bce1Route: DashboardhtmlEcf7c69981b0bce1Route,
+  DashboardRoute: DashboardRoute,
   DocsRoute: DocsRoute,
-  Docshtml53d5ff2ab416f88cRoute: Docshtml53d5ff2ab416f88cRoute,
+  PlaygroundRoute: PlaygroundRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
