@@ -3,7 +3,16 @@ import { createFileRoute } from "@tanstack/react-router";
 import capturedCSS from "../styles/site.css?raw";
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [{ title: "PromptShield — LLM Prompt Injection Defense" }] }),
+  head: () => ({
+    meta: [
+      { title: "PromptShield — LLM Prompt Injection Defense" },
+      { name: "description", content: "PromptShield is a 4-layer defense middleware that blocks jailbreaks, system prompt leaking, and instruction overrides in real time." },
+      { property: "og:title", content: "PromptShield — LLM Prompt Injection Defense" },
+      { property: "og:description", content: "4-layer defense middleware that blocks jailbreaks, system prompt leaking, and instruction overrides in real time." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   staticData: { importedDocument: { html: { "lang": "en" }, body: { "data-site-import-responsive-incomplete": "scroll" } } },
   component: Index,
 });
