@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as DocsRouteImport } from './routes/docs'
 import { Route as PlaygroundRouteImport } from './routes/playground'
+import { Route as ApiPublicV1ScanRouteImport } from './routes/api/public/v1/scan'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const PlaygroundRoute = PlaygroundRouteImport.update({
   path: '/playground',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicV1ScanRoute = ApiPublicV1ScanRouteImport.update({
+  id: '/api/public/v1/scan',
+  path: '/api/public/v1/scan',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/docs': typeof DocsRoute
   '/playground': typeof PlaygroundRoute
+  '/api/public/v1/scan': typeof ApiPublicV1ScanRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/docs': typeof DocsRoute
   '/playground': typeof PlaygroundRoute
+  '/api/public/v1/scan': typeof ApiPublicV1ScanRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,21 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRoute
   '/docs': typeof DocsRoute
   '/playground': typeof PlaygroundRoute
+  '/api/public/v1/scan': typeof ApiPublicV1ScanRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dashboard' | '/docs' | '/playground'
+  fullPaths:
+    '/' | '/dashboard' | '/docs' | '/playground' | '/api/public/v1/scan'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dashboard' | '/docs' | '/playground'
-  id: '__root__' | '/' | '/dashboard' | '/docs' | '/playground'
+  to: '/' | '/dashboard' | '/docs' | '/playground' | '/api/public/v1/scan'
+  id:
+    | '__root__'
+    | '/'
+    | '/dashboard'
+    | '/docs'
+    | '/playground'
+    | '/api/public/v1/scan'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +83,7 @@ export interface RootRouteChildren {
   DashboardRoute: typeof DashboardRoute
   DocsRoute: typeof DocsRoute
   PlaygroundRoute: typeof PlaygroundRoute
+  ApiPublicV1ScanRoute: typeof ApiPublicV1ScanRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PlaygroundRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/v1/scan': {
+      id: '/api/public/v1/scan'
+      path: '/api/public/v1/scan'
+      fullPath: '/api/public/v1/scan'
+      preLoaderRoute: typeof ApiPublicV1ScanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +131,7 @@ const rootRouteChildren: RootRouteChildren = {
   DashboardRoute: DashboardRoute,
   DocsRoute: DocsRoute,
   PlaygroundRoute: PlaygroundRoute,
+  ApiPublicV1ScanRoute: ApiPublicV1ScanRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

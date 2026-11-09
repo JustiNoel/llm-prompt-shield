@@ -93,15 +93,16 @@ function Index() {
               </ul>
             </div>
             <pre className="overflow-x-auto rounded-2xl border border-border bg-card p-6 font-mono text-sm shadow-soft">
-{`import OpenAI from "openai";
-
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-  baseURL: "https://gateway.promptshield.io/v1",
-  defaultHeaders: {
-    "x-shield-key": process.env.SHIELD_KEY,
+{`const res = await fetch(
+  "https://llm-prompt-shield.lovable.app/api/public/v1/scan",
+  {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ prompt: userInput }),
   },
-});`}
+);
+const { verdict, sanitized } = await res.json();
+if (verdict === "block") throw new Error("Blocked");`}
             </pre>
           </div>
         </section>
