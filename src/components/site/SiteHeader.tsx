@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ShieldCheck } from "lucide-react";
+import logo from "@/assets/shield-logo.png.asset.json";
 import { Button } from "@/components/ui/button";
 
 const NAV = [
@@ -13,9 +13,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/70 glass">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <Link to="/" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-primary text-primary-foreground shadow-elegant">
-            <ShieldCheck className="h-4 w-4" />
-          </span>
+          <img src={logo.url} alt="PromptShield logo" className="h-9 w-9 rounded-lg border border-border object-cover shadow-soft" />
           PromptShield
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
